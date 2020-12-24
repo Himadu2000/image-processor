@@ -11,11 +11,12 @@ const IndexPage = () => {
       data.append("photos", file)
     })
 
+    const ServerURL = process.env.SERVER || "http://localhost:3000/"
     // Do something with the files
     const response = await axios({
       //   photos: acceptedFiles,
       method: "post",
-      url: "http://localhost:3000/",
+      url: ServerURL,
       headers: { "Content-Type": "multipart/form-data" },
       data: data,
     })
