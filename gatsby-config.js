@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
+    title: `An Image processor`,
     description: `An image proceesser.`,
     author: `@himadu`,
   },
@@ -29,6 +29,22 @@ module.exports = {
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
+    `gatsby-plugin-offline`,
+    // sitemap
+    `gatsby-plugin-sitemap`,
+    // Robots.txt
+    "gatsby-plugin-robots-txt",
+    // sass/scss
+    `gatsby-plugin-sass`,
+    // Page Load screen
+    {
+      resolve: `gatsby-plugin-nprogress`,
+      options: {
+        // Setting a color is optional.
+        color: `tomato`,
+        // Disable the loading spinner.
+        showSpinner: true,
+      },
+    },
   ],
 }
