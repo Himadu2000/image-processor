@@ -11,7 +11,7 @@ const IndexPage = () => {
       data.append("photos", file)
     })
 
-    const ServerURL = process.env.SERVER || "http://localhost:3000/"
+    const ServerURL = "https://image-processor-backend.herokuapp.com/"
     // Do something with the files
     const response = await axios({
       //   photos: acceptedFiles,
