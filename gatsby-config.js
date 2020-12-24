@@ -3,6 +3,7 @@ module.exports = {
     title: `An Image processor`,
     description: `An image proceesser.`,
     author: `@himadu`,
+    siteUrl: `https://image-processor-20142.web.app/`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
