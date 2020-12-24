@@ -16,6 +16,7 @@ jobs:
         node-version: [14.x]
 
     env:
+      SERVER: ${{ secrets.SERVER }}
       FIREBASE_CONFIG_PRIVATE_KEY: ${{ secrets.FIREBASE_CONFIG_PRIVATE_KEY }}
 
     steps:
@@ -24,6 +25,9 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
+
+        env:
+          SERVER: ${{ secrets.SERVER }}
       #- run: npm ci
       - run: yarn
       - run: npx gatsby build #--if-present
